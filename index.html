@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecureSight - Your Partner in Security</title>
+    <title>SecureSight - Комплексное решение по безопасности</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -28,6 +28,10 @@
         }
         section {
             padding: 20px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         footer {
             text-align: center;
@@ -38,62 +42,64 @@
             bottom: 0;
             width: 100%;
         }
-        .services {
-            display: flex;
-            justify-content: space-around;
-        }
-        .service-item {
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 30%;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
     <header>
         <h1>SecureSight</h1>
         <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+            <a href="#about">О нас</a>
+            <a href="#components">Компоненты</a>
+            <a href="#technologies">Технологии</a>
+            <a href="#contact">Контакты</a>
         </nav>
     </header>
 
     <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to SecureSight, your trusted partner in ensuring comprehensive security solutions. Our mission is to provide top-notch security services tailored to your needs, ensuring peace of mind in a complex world.</p>
+        <h2>О нас</h2>
+        <p>SecureSight – это комплексное решение по безопасности ритейлеров, торговых центров, музеев и других мест массового посещения.</p>
+        <p>Предприятия получат возможность вычислять нежелательных покупателей, вооруженных людей, чрезвычайные ситуации, а также отслеживать передвижение посетителей по выбранной локации посредством видеоанализа.</p>
     </section>
-    
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service-item">
-                <h3>Security Consulting</h3>
-                <p>Expert analysis and advice on securing your assets and data.</p>
-            </div>
-            <div class="service-item">
-                <h3>Risk Assessment</h3>
-                <p>Comprehensive evaluation to identify vulnerabilities in your systems.</p>
-            </div>
-            <div class="service-item">
-                <h3>24/7 Monitoring</h3>
-                <p>Round-the-clock surveillance and monitoring for immediate response.</p>
-            </div>
-        </div>
+
+    <section id="components">
+        <h2>Компоненты системы</h2>
+        <p>SecureSight состоит из трех основных компонентов:</p>
+        <ul>
+            <li><strong>Telegram-бот:</strong> для удобного взаимодействия пользователя с системой и нейронными сетями.</li>
+            <li><strong>Нейронные сети:</strong> для распознавания лиц, обнаружения оружия и выявления нестандартных ситуаций.</li>
+            <li><strong>Удаленный сервер:</strong> на который поступает видеоряд с камер и на котором размещено программное обеспечение для первых двух компонентов.</li>
+        </ul>
     </section>
-    
+
+    <section id="technologies">
+        <h2>Ключевые технологии</h2>
+        <ul>
+            <li>Компьютерное зрение: для обработки видеопотоков и распознавания объектов.</li>
+            <li>Машинное обучение: для обучения нейронных сетей и улучшения их точности.</li>
+            <li>Облачные технологии: для хранения данных и обеспечения масштабируемости.</li>
+            <li>API Telegram: для интеграции с Telegram и автоматизации уведомлений.</li>
+        </ul>
+
+        <h3>Возможности системы</h3>
+        <ul>
+            <li>Распознавание лиц: идентификация покупателей на основе видеопотока, включая их возраст и эмоции.</li>
+            <li>Обнаружение оружия: определение наличия огнестрельного оружия в общественных местах.</li>
+            <li>Анализ поведения: выявление аномалий в поведении людей (например, драки или паника).</li>
+            <li>Анализ передвижения: определение передвижения посетителей, создание тепловых карт и определение местоположения в реальном времени.</li>
+            <li>Мониторинг в реальном времени: поставляет оповещения о безопасности мгновенно.</li>
+        </ul>
+    </section>
+
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or need further information, feel free to reach out!</p>
-        <p>Email: <a href="mailto:info@securesight.com">info@securesight.com</a></p>
-        <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        <h2>Обратная связь</h2>
+        <p>Если у вас возникли вопросы или необходима поддержка, свяжитесь с нами через Telegram-бот, Telegram или по электронной почте: <a href="mailto:securesight@mail.ru">securesight@mail.ru</a></p>
+
+        <h3>Демонстрация взаимодействия с системой</h3>
+        <p><em>видео</em></p>
     </section>
-    
+
     <footer>
-        <p>&copy; 2024 SecureSight. All rights reserved.</p>
+        <p>&copy; 2024 SecureSight. Все права защищены.</p>
     </footer>
 </body>
 </html>
