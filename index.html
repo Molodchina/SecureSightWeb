@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecureSight - Комплексное решение по безопасности</title>
+    <title>SecureSight - Comprehensive Security Solution</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #ffffff; /* white background */
+            color: #333; /* text color for readability */
         }
         header {
-            background: #343a40;
+            background: #007bff; /* blue header */
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
@@ -36,7 +37,7 @@
         footer {
             text-align: center;
             padding: 10px 0;
-            background: #343a40;
+            background: #007bff; /* blue footer */
             color: #ffffff;
             position: relative;
             bottom: 0;
@@ -50,29 +51,38 @@
             max-width: 800px;
             height: auto;
         }
+        .language-toggle {
+            margin: 20px;
+            cursor: pointer;
+            background-color: #007bff; /* blue button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>SecureSight</h1>
+        <h1 id="site-title">SecureSight</h1>
         <nav>
-            <a href="#about">О нас</a>
-            <a href="#components">Компоненты</a>
-            <a href="#technologies">Технологии</a>
-            <a href="#demonstration">Демонстрация</a>
-            <a href="#contact">Контакты</a>
+            <a href="#about" id="about-link">О нас</a>
+            <a href="#components" id="components-link">Компоненты</a>
+            <a href="#technologies" id="technologies-link">Технологии</a>
+            <a href="#demonstration" id="demonstration-link">Демонстрация</a>
+            <a href="#contact" id="contact-link">Контакты</a>
         </nav>
+        <button class="language-toggle" onclick="toggleLanguage()">EN/RU</button>
     </header>
 
     <section id="about">
-        <h2>О нас</h2>
-        <p>SecureSight – это комплексное решение по безопасности ритейлеров, торговых центров, музеев и других мест массового посещения.</p>
-        <p>Предприятия получат возможность вычислять нежелательных покупателей, вооруженных людей, чрезвычайные ситуации, а также отслеживать передвижение посетителей по выбранной локации посредством видеоанализа.</p>
+        <h2 id="about-title">О нас</h2>
+        <p id="about-text">SecureSight – это комплексное решение по безопасности ритейлеров, торговых центров, музеев и других мест массового посещения.</p>
     </section>
 
     <section id="components">
-        <h2>Компоненты системы</h2>
-        <p>SecureSight состоит из трех основных компонентов:</p>
+        <h2 id="components-title">Компоненты системы</h2>
+        <p id="components-text">SecureSight состоит из трех основных компонентов:</p>
         <ul>
             <li><strong>Telegram-бот:</strong> для удобного взаимодействия пользователя с системой и нейронными сетями.</li>
             <li><strong>Нейронные сети:</strong> для распознавания лиц, обнаружения оружия и выявления нестандартных ситуаций.</li>
@@ -81,7 +91,7 @@
     </section>
 
     <section id="technologies">
-        <h2>Ключевые технологии</h2>
+        <h2 id="technologies-title">Ключевые технологии</h2>
         <ul>
             <li>Компьютерное зрение: для обработки видеопотоков и распознавания объектов.</li>
             <li>Машинное обучение: для обучения нейронных сетей и улучшения их точности.</li>
@@ -89,7 +99,7 @@
             <li>API Telegram: для интеграции с Telegram и автоматизации уведомлений.</li>
         </ul>
 
-        <h3>Возможности системы</h3>
+        <h3 id="features-title">Возможности системы</h3>
         <ul>
             <li>Распознавание лиц: идентификация покупателей на основе видеопотока, включая их возраст и эмоции.</li>
             <li>Обнаружение оружия: определение наличия огнестрельного оружия в общественных местах.</li>
@@ -100,7 +110,7 @@
     </section>
 
     <section id="demonstration">
-        <h2>Демонстрация взаимодействия с системой</h2>
+        <h2 id="demonstration-title">Демонстрация взаимодействия с системой</h2>
         <div id="video-section">
             <video controls>
                 <source src="https://github.com/user-attachments/assets/00ee30c1-b38f-4d59-9c4e-558aac3cbc6b" type="video/webm">
@@ -109,8 +119,8 @@
     </section>
 
     <section id="contact">
-        <h2>Обратная связь</h2>
-        <p>Если у вас возникли вопросы или необходима поддержка, свяжитесь с нами:</p>
+        <h2 id="contact-title">Обратная связь</h2>
+        <p id="contact-text">Если у вас возникли вопросы или необходима поддержка, свяжитесь с нами:</p>
         <ul>
             <li><a href="https://t.me/securesight_bot">Telegram-бот</a></li>
             <li><a href="https://t.me/RussianPolarBear">Telegram</a></li>
@@ -121,5 +131,94 @@
     <footer>
         <p>&copy; 2024 SecureSight. Все права защищены.</p>
     </footer>
+
+    <script>
+        const texts = {
+            en: {
+                title: "SecureSight",
+                aboutTitle: "About Us",
+                aboutText: "SecureSight is a comprehensive security solution for retailers, shopping malls, museums, and other places of mass attendance.",
+                componentsTitle: "System Components",
+                componentsText: "SecureSight consists of three main components:",
+                feature1: "Telegram Bot: for convenient interaction of the user with the system and neural networks.",
+                feature2: "Neural Networks: for face recognition, weapon detection, and identification of unusual situations.",
+                feature3: "Remote Server: which receives the video stream from the cameras and hosts the software for the first two components.",
+                technologiesTitle: "Key Technologies",
+                technologiesList: [
+                    "Computer Vision: for processing video streams and recognizing objects.",
+                    "Machine Learning: for training neural networks and improving their accuracy.",
+                    "Cloud Technologies: for data storage and ensuring scalability.",
+                    "Telegram API: for integration with Telegram and automation of notifications."
+                ],
+                featuresTitle: "System Capabilities",
+                contactText: "If you have any questions or need support, contact us:",
+                demonstrationTitle: "Demonstration of Interaction with the System"
+            },
+            ru: {
+                title: "SecureSight",
+                aboutTitle: "О нас",
+                aboutText: "SecureSight – это комплексное решение по безопасности ритейлеров, торговых центров, музеев и других мест массового посещения.",
+                componentsTitle: "Компоненты системы",
+                componentsText: "SecureSight состоит из трех основных компонентов:",
+                feature1: "Telegram-бот: для удобного взаимодействия пользователя с системой и нейронными сетями.",
+                feature2: "Нейронные сети: для распознавания лиц, обнаружения оружия и выявления нестандартных ситуаций.",
+                feature3: "Удаленный сервер: на который поступает видеоряд с камер и на котором размещено программное обеспечение для первых двух компонентов.",
+                technologiesTitle: "Ключевые технологии",
+                technologiesList: [
+                    "Компьютерное зрение: для обработки видеопотоков и распознавания объектов.",
+                    "Машинное обучение: для обучения нейронных сетей и улучшения их точности.",
+                    "Облачные технологии: для хранения данных и обеспечения масштабируемости.",
+                    "API Telegram: для интеграции с Telegram и автоматизации уведомлений."
+                ],
+                featuresTitle: "Возможности системы",
+                contactText: "Если у вас возникли вопросы или необходима поддержка, свяжитесь с нами:",
+                demonstrationTitle: "Демонстрация взаимодействия с системой"
+            }
+        };
+
+        let currentLanguage = 'ru';
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'ru' ? 'en' : 'ru';
+            updateLanguage();
+        }
+
+        function updateLanguage() {
+            document.getElementById('site-title').innerText = texts[currentLanguage].title;
+            document.getElementById('about-link').innerText = currentLanguage === 'ru' ? "О нас" : "About Us";
+            document.getElementById('components-link').innerText = currentLanguage === 'ru' ? "Компоненты" : "Components";
+            document.getElementById('technologies-link').innerText = currentLanguage === 'ru' ? "Технологии" : "Technologies";
+            document.getElementById('demonstration-link').innerText = currentLanguage === 'ru' ? "Демонстрация" : "Demonstration";
+            document.getElementById('contact-link').innerText = currentLanguage === 'ru' ? "Контакты" : "Contact";
+
+            document.getElementById('about-title').innerText = texts[currentLanguage].aboutTitle;
+            document.getElementById('about-text').innerText = texts[currentLanguage].aboutText;
+            document.getElementById('components-title').innerText = texts[currentLanguage].componentsTitle;
+            document.getElementById('components-text').innerText = texts[currentLanguage].componentsText;
+
+            const featuresList = [
+                texts[currentLanguage].feature1,
+                texts[currentLanguage].feature2,
+                texts[currentLanguage].feature3
+            ];
+            const componentList = document.querySelectorAll('#components li');
+            componentList.forEach((item, index) => {
+                item.innerHTML = featuresList[index];
+            });
+
+            document.getElementById('technologies-title').innerText = texts[currentLanguage].technologiesTitle;
+            const technologiesList = document.querySelector('#technologies ul');
+            technologiesList.innerHTML = '';
+            texts[currentLanguage].technologiesList.forEach(item => {
+                let listItem = document.createElement('li');
+                listItem.innerText = item;
+                technologiesList.appendChild(listItem);
+            });
+
+            document.getElementById('features-title').innerText = texts[currentLanguage].featuresTitle;
+            document.getElementById('contact-text').innerText = texts[currentLanguage].contactText;
+            document.getElementById('demonstration-title').innerText = texts[currentLanguage].demonstrationTitle;
+        }
+    </script>
 </body>
 </html>
